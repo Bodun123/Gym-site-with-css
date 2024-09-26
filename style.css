@@ -1,0 +1,164 @@
+/* Загальні стилі для всіх сторінок */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+/* Стилі для header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3e8e99;
+    border-bottom: 2px solid #7cabc2;
+}
+/* Стилі для заголовків(назв сторінок) */
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+}
+/* Стилі для таблиць */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #b0bec5;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #00796b;
+    color: white;
+}
+/* Стилі для зображень в таблицях */
+img {
+    height: 300px;
+    width: 300px;
+}
+/* Стилі для посилань для всього документу */
+a {
+    text-decoration: none;
+    color: #00796b;
+    padding: 5px;
+    transition: background-color 0.5s ease;
+}
+a:hover {
+    color: white;
+    background-color: #00796b;
+    border-radius: 5px;
+}
+/* Стилі для списків(наприклад, для сторінки About Us) */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+/* Стилі для footer для всіх сторінок*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #004d40;
+}
+footer p {
+    margin: 0;
+    font-size: 20px;
+}
+/* Стилі для головної сторінки */
+/* Стиль для основного слогану */
+.home-page header h3 {
+    color: white;
+}
+/* Стилі для навігації на головній сторінці */
+.home-page nav {
+    background-color: #00695c;
+    padding: 10px 0;
+    text-align: center;
+}
+/* Стилі для списку в навігації головної сторінки*/
+.home-page nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.home-page nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+}
+/* Стилі для посилання в навігації головної сторінки*/
+.home-page a {
+    color: white;
+    font-size: 20px;
+}
+/* Стилі для зображженя на головній сторінці */
+.home-page img {
+    width: 100%;
+    height: 1000px;
+}
+/* Стилі для сторінки About Us */
+/* Стилі для секцій на всіх сторінках */
+.about-page, .famous-page, .links-page, .prices-page, .recommendations-page, .home-page section {
+    margin: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+}
+/* Стилі для заголовків на сторінці About Us */
+.about-page h2 {
+    color: #00796b;
+    font-size: 22px;
+    border-bottom: 2px solid #b0bec5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+/* Стилі для зображення на сторінци About Us */
+.about-page img {
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+/* Стилі для сторінки Prices & Coaches */
+.prices-page section h2 {
+    color: #00796b;
+    font-size: 22px;
+    border-bottom: 2px solid #b0bec5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+/* Стилі для сторінки Links & Address */
+.links-page section h2 {
+    color: #00796b;
+    font-size: 22px;
+    border-bottom: 2px solid #b0bec5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+/* Стилі для iframe карти */
+.links-page iframe {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #b0bec5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+}
+/* Стилі для заголовку Our Address */
+.address1 {
+    text-align: center;
+    color: #00796b;
+}
+/* Стилі для сторінки Recommendations */
+/* Стилі для Attention*/
+.recommendations-page header h2 {
+    color: red;
+}
