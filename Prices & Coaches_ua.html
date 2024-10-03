@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ціни та Тренери</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="prices-page">
+    <!-- в header додав заголовок сторінки -->
+    <header>
+        <h1>Light Weight Gym - наші ціни</h1>
+    </header>
+    <!--Додав реалізацію переходу на інші сторінки за допомогою form та select-->
+    <form>
+        <select onchange="navigateToPage(this.value)">
+            <option value="index.html">Головна</option>
+            <option value="About Us.html">Про Нас</option>
+            <option value="Links & Address.html">Посилання та Адреса</option>
+            <option value="Recommendations.html">Рекомендації</option>
+            <option value="browser version.html">Версія для браузера</option>
+            <option value="Famous clients">Famous clients</option>
+        </select>
+    </form>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+    <!--додав вибір мови сайта-->
+    <form>
+        <select onchange="changeLanguage(this.value)">
+            <option value="ua">UA</option>
+            <option value="eng">ENG</option>
+        </select>
+    </form>
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'ua') {
+                window.location.href = 'Prices & Coaches_ua.html';
+            } else if (lang === 'eng') {
+                window.location.href = 'Prices & Coaches_eng.html';
+            }
+        }
+    </script>
+    <!-- в section додав заголовок та лист з цінами за абонемент -->
+    <section>
+        <h2>Плани Тарифів</h2>
+        <ul>
+            <li>Місячний Абонемент: $46</li>
+            <li>Квартальний Абонемент: $132</li>
+            <li>Річний Абонемент: $467</li>
+            <li>Знижки для студентів!</li>
+        </ul>
+        <!--Створив скрипт, який може обчислювати-->
+        <script>
+            var a = 46, b = 12;
+            document.write('Сума: ' + (a + b));
+            document.write('Різниця: ' + (a - b));
+            alert('Множення: ' + (a * b));
+            alert('Ділення: ' + (a / b));
+        </script>
+    </section>
+    <!-- в section додав заголовок зі списком цін за персональні тренування -->
+    <section>
+        <h2>Персональні Тренування</h2>
+        <ul>
+            <li>Ціна залежить від тренера</li>
+        </ul>
+    </section>
+    <!-- в section додав заголовок та таблицю з посиланнями та вкладеними зображеннямі нашіх тренерів -->
+    <section>
+        <h2>Наші Тренери</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ім'я Тренера</th>
+                    <th>Досвід</th>
+                    <th>Спортивні Досягнення</th>
+                    <th>Доступність</th>
+                    <th>Контакти</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Кевін Левроні</td>
+                    <td>15 Років</td>
+                    <td>2x Містер Олімпія</td>
+                    <td>Щодня</td>
+                    <td><a href="https://www.instagram.com/kevinlevrone/" target="_blank">Instagram</a></td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvm4jUjU5gq7Kw_stZHLMeQ7emq0tBm1OWrA&s"></td>
+                </tr>
+                <tr>
+                    <td>Сергій Данилець</td>
+                    <td>5 Років</td>
+                    <td>1x Чемпіон Європи</td>
+                    <td>Щодня</td>
+                    <td><a href="https://www.instagram.com/serhii.danilets/" target="_blank">Instagram</a></td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxBwZuTApYyGHaC0-TYNqV5gLY601cMZThLQ&s"></td>
+                </tr>
+                <tr>
+                    <td>Кріс Бамстед</td>
+                    <td>7.5 Років</td>
+                    <td>5x Містер Олімпія</td>
+                    <td>Щодня</td>
+                    <td><a href="https://www.instagram.com/CBUM/" target="_blank">Instagram</a></td>
+                    <td><img src="https://thebarbell.com/wp-content/uploads/2023/01/Cbum-2022-Olympia.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- За допомогою footer'а написав про авторські права -->
+    <footer>
+        <p>&copy; 2024 Light Weight Gym. Всі права захищені.</p>
+    </footer>
+</body>
+</html>

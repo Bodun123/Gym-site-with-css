@@ -11,6 +11,22 @@
     <header>
         <h1>About Light Weight Gym</h1>
     </header>
+    <!--Додав реалізацію переходу на інші сторінки за допомогою form та select-->
+    <form>
+        <select onchange="navigateToPage(this.value)">
+            <option value="index.html">Home</option>
+            <option value="Prices & Coaches_eng.html">Prices & Coaches</option>
+            <option value="Links & Address.html">Links & Address</option>
+            <option value="Recommendations.html">Recommendations</option>
+            <option value="browser version.html">Browser version</option>
+            <option value="Famous clients">Famous clients</option>
+        </select>
+    </form>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
     <!-- в section додав наші наміри на ринку -->
     <section>
         <h2>Our Mission</h2>
@@ -27,7 +43,7 @@
             <li><a href="Prices & Coaches.html" target="_blank">Coaches</a></li>
         </ul>
     </section>
-    <img src="https://favouremeli.com/wp-content/uploads/2023/11/what-makes-a-good-team.jpg" alt="">
+    <img src="https://uainfo.org/static/img/_/_/__komanda_500x317.jpg" alt="" onmouseover="this.style.width='500px';this.style.height='400px';" onmouseout="this.style.width='300px';this.style.height='200px';">
     <!-- За допомогою footer'а написав про авторські права -->
     <footer>
         <p>&copy; 2024 Light Weight Gym. All rights reserved.</p>

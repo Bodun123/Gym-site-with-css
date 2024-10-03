@@ -12,6 +12,22 @@
         <h1>Supplement Recommendations from Light Weight Gym</h1>
         <h2>ATTENTION! Don`t use without a doctor's advice</h2>
     </header>
+    <!--Додав реалізацію переходу на інші сторінки за допомогою form та select-->
+    <form>
+        <select onchange="navigateToPage(this.value)">
+            <option value="index.html">Home</option>
+            <option value="About Us.html">About Us</option>
+            <option value="Prices & Coaches_eng.html">Prices & Coaches</option>
+            <option value="Links & Address.html">Links & Address</option>
+            <option value="browser version.html">Browser version</option>
+            <option value="Famous clients">Famous clients</option>
+        </select>
+    </form>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
     <!-- в section додав таблицю з вкладеними посиланнями на медикаменти та харчові добавки, а також вкладені зображення-->
     <section>
     <table>

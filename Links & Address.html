@@ -11,6 +11,22 @@
     <header>
         <h1>Light Weight Gym - Links & Address</h1>
     </header>
+    <!--Додав реалізацію переходу на інші сторінки за допомогою form та select-->
+    <form>
+        <select onchange="navigateToPage(this.value)">
+            <option value="index.html">Home</option>
+            <option value="About Us.html">About Us</option>
+            <option value="Prices & Coaches_eng.html">Prices & Coaches</option>
+            <option value="Recommendations.html">Recommendations</option>
+            <option value="browser version.html">Browser version</option>
+            <option value="Famous clients">Famous clients</option>
+        </select>
+    </form>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
     <!-- в section додав список посилань на рекомендовані посилання -->
     <section>
         <h2>Useful Links</h2>
@@ -21,6 +37,28 @@
     <!-- в section додав заголовок для списку контактів-->
     <section>
         <h2>Contact Us</h2>
+        <!-- Створив скрипт, який виводить зображення в залежності від вибору -->
+        <form>
+            <input type="radio" name="image" value="image1" onclick="showImage('img1')"> Image 1
+            <input type="radio" name="image" value="image2" onclick="showImage('img2')"> Image 2
+            <input type="radio" name="image" value="image3" onclick="showImage('img3')"> Image 3
+            <input type="radio" name="image" value="image4" onclick="showImage('img4')"> Image 4
+            <input type="radio" name="image" value="image5" onclick="showImage('img5')"> Image 5
+            <input type="radio" name="image" value="reset" onclick="showImage('reset')"> Reset
+        </form>
+        <div id="img"></div>
+        <script>
+            function showImage(imageId) {
+                var images = {
+                    'img1': '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi3vlT5dDAjGcfFMvv4WTu5P-go2UphNmvbQ&s" width="200" height="150">',
+                    'img2': '<img src="https://img.freepik.com/free-photo/forest-landscape_71767-127.jpg" width="200" height="150">',
+                    'img3': '<img src="https://lafoy.ru/photo_l/foto-4119-0.jpg" width="200" height="150">',
+                    'img4': '<img src="https://images.prom.ua/2913529835_w600_h600_2913529835.jpg" width="200" height="150">',
+                    'img5': '<img src="https://www.ixbt.com/img/n1/news/2023/5/4/2023-06-15%2011.55.09_large.jpg" width="200" height="150">'
+                };
+                document.getElementById('img').innerHTML = images[imageId];
+            }
+        </script>
         <ul>
             <li><a href="mailto:lightweightgym@gmail.com">lightweightgym@gmail.com</a></li>
             <li><a href="tel:+380667200585">+380667200585</a></li>

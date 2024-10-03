@@ -11,6 +11,22 @@
     <header>
         <h1>Famous Clients of Light Weight Gym</h1>
     </header>
+    <!--Додав реалізацію переходу на інші сторінки за допомогою form та selection-->
+    <form>
+        <select onchange="navigateToPage(this.value)">
+            <option value="index.html">Home</option>
+            <option value="About Us.html">About Us</option>
+            <option value="Prices & Coaches_eng.html">Prices & Coaches</option>
+            <option value="Links & Address.html">Links & Address</option>
+            <option value="Recommendations.html">Recommendations</option>
+            <option value="browser version.html">Browser version</option>
+        </select>
+    </form>
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
     <!-- в section додав заголовок до таблиці та саму таблицю з вкладеними зображеннями -->
         <section>
             <h2>Celebrities</h2>
