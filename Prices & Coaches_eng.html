@@ -43,6 +43,7 @@
             }
         }
     </script>
+    </script>
     <!-- в section додав заголовок та лист з цінами за абонемент -->
     <section>
         <h2>Pricing Plans</h2>
@@ -66,6 +67,60 @@
         <h2>Personal Trainings</h2>
         <ul>
             <li>Price depends from coach</li>
+            <section>
+                <h2>Leave your request for training</h2>
+                <!-- Форма для запису на тренування та зв`язок з JS-->
+                <form id="training" onsubmit="return submitForm();">
+                    <!-- вводимо ім'я -->
+                <label for="name">Your name: </label>
+                <input type="text" name="name" id="name" required>
+                <!-- вибір тренера -->
+                <label for="coach">Select your coach: </label>
+                <select name="coach" id="coach" required>
+                    <option value="">Select your coach: </option>
+                    <option value="Kevin Levrone">Kevin Levrone</option>
+                    <option value="Serhii Danilets">Serhii Danilets</option>
+                    <option value="Chris Bumstead">Chris Bumstead</option>
+                </select>
+                <!-- обираємо дату -->
+                <label for="date">Date: </label>
+                <input type="date" id="date" name="date" required>
+                <!-- обираємо час -->
+                <label for="time">Time: </label>
+                <input type="time" id="time" name="time" required>
+                <!-- поля Radio, обираємо тренування  -->
+                <label>Choose your training type:</label>
+                <input type="radio" id="personal" name="training_type" value="Personal Training" required>
+                <label for="personal">Personal Training</label>
+                <!-- поля Checkbox -->
+                <label>Would you like to receive reminders?</label>
+                <input type="checkbox" id="reminder" name="reminder" value="Yes">
+                <label for="reminder">Yes, send me reminders</label>
+                <label>Would you like to receive a training plan?</label>
+                <input type="checkbox" id="training_plan" name="training_plan" value="Yes">
+                <label for="training_plan">Yes, send me a training plan</label>
+                <!-- підтвердження запису -->
+                <button type="submit">Enroll</button>
+            </form>
+            </section>
+            <script>
+                /* функція для форми */
+                function submitForm() {
+                    /* отримуємо значення з форми */
+                    let name = document.getElementById("name").value;
+                    let coach = document.getElementById("coach").value;
+                    let date = document.getElementById("date").value;
+                    let time = document.getElementById("time").value;
+                    /* перевірка чи всі поля заповнились та виводимо запис на тренування, якщо все окей */
+                    if (name && coach && date && time) {
+                        alert("Successfully enrolled in training session on: " + date + " at " + time);
+                        return false;
+                    }
+                    /* якщо поля не заповнені видаємо повідомлення*/
+                    alert("Fill in all fields");
+                    return false;
+                }
+            </script>
         </ul>
     </section>
     <!-- в section додав заголовок та таблицю з посиланнями та вкладеними зображеннямі нашіх тренерів -->

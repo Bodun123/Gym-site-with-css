@@ -19,7 +19,7 @@
             <option value="Links & Address.html">Посилання та Адреса</option>
             <option value="Recommendations.html">Рекомендації</option>
             <option value="browser version.html">Версія для браузера</option>
-            <option value="Famous clients">Famous clients</option>
+            <option value="Famous clients">Відомі клієнти</option>
         </select>
     </form>
     <script>
@@ -68,6 +68,62 @@
             <li>Ціна залежить від тренера</li>
         </ul>
     </section>
+    <section>
+        <h2>Залишіть заявку на тренування</h2>
+        <!-- Форма для запису на тренування та зв`язок з JS-->
+        <form id="training" onsubmit="return submitForm();">
+            <!-- вводимо ім'я -->
+        <label for="name">Ваше ім'я : </label>
+        <input type="text" name="name" id="name" required>
+        <!-- вибір тренера -->
+        <label for="coach">Оберіть тренера: </label>
+        <select name="coach" id="coach" required>
+            <option value="">Оберіть тренера: </option>
+            <option value="Kevin Levrone">Кевін Левроні</option>
+            <option value="Serhii Danilets">Сергій Данилець</option>
+            <option value="Chris Bumstead">Кріс Бамстед</option>
+        </select>
+        <!-- обираємо дату -->
+        <label for="date">Дата: </label>
+        <input type="date" id="date" name="date" required>
+        <!-- обираємо час -->
+        <label for="time">Час: </label>
+        <input type="time" id="time" name="time" required>
+        <!-- поля Radio, обираємо тренування  -->
+        <label>Оберіть тип тренування:</label>
+        <input type="radio" id="personal" name="training_type" value="Personal Training" required>
+        <label for="personal">Персональне тренування </label>
+        <!-- поля Checkbox -->
+        <label>Бажаєте отримувати нагадування? </label>
+        <input type="checkbox" id="reminder" name="reminder" value="Yes">
+        <label for="reminder">Так, бажаю</label>
+        <label>Бажаєте отримати тренувальний план? </label>
+        <input type="checkbox" id="training_plan" name="training_plan" value="Yes">
+        <label for="training_plan">Так, бажаю</label>
+        <!-- підтвердження запису -->
+        <button type="submit">Записатись</button>
+    </form>
+    </section>
+    <script>
+        /* функція для форми */
+        function submitForm() {
+            /* отримуємо значення з форми */
+            let name = document.getElementById("name").value;
+            let coach = document.getElementById("coach").value;
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+            let training_type = document.querySelector('input[name="training_type"]:checked').value;
+            let training_plan = document.querySelector('input[name="training_type"]:checked').value;
+            /* перевірка чи всі поля заповнились та виводимо запис на тренування, якщо все окей */
+            if (name && coach && date && time) {
+                alert("Ви успішно записались на тренування на : " + date + " о " + time);
+                return false;
+            }
+            /* якщо поля не заповнені видаємо повідомлення*/
+            alert("Заповніть всі поля");
+            return false;
+        }
+    </script>
     <!-- в section додав заголовок та таблицю з посиланнями та вкладеними зображеннямі нашіх тренерів -->
     <section>
         <h2>Наші Тренери</h2>
@@ -102,7 +158,7 @@
                 <tr>
                     <td>Кріс Бамстед</td>
                     <td>7.5 Років</td>
-                    <td>5x Містер Олімпія</td>
+                    <td>6x Містер Олімпія</td>
                     <td>Щодня</td>
                     <td><a href="https://www.instagram.com/CBUM/" target="_blank">Instagram</a></td>
                     <td><img src="https://thebarbell.com/wp-content/uploads/2023/01/Cbum-2022-Olympia.png"></td>
